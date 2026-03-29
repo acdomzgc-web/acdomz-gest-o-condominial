@@ -44,60 +44,39 @@ export default function Fundadores() {
               </div>
 
               <div className="space-y-8 pr-4">
-                <Card className="bg-secondary/30 border-white/10 rounded-sm">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-serif text-primary mb-4 flex items-center gap-2">
-                      <History className="w-5 h-5" /> História
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      Especialista em resolução de conflitos, gestão financeira otimizada e
-                      administração condominial. Adir desenvolveu a sólida base administrativa da
-                      ACDOMZ, priorizando a transparência absoluta, a comunicação clara e a
-                      valorização do bem-estar dos moradores, tratando cada condomínio como um
-                      verdadeiro lar.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-secondary/30 border-white/10 rounded-sm">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-serif text-primary mb-4 flex items-center gap-2">
-                      <GraduationCap className="w-5 h-5" /> Formação
-                    </h3>
-                    <ul className="space-y-3 text-muted-foreground text-sm">
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                        <span>Bacharel em Administração de Empresas</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                        <span>Especialização em Gestão Condominial e Sindicatura Profissional</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                <div>
+                  Engenheiro Civil de formação e inovador por vocação, Carlos Eduardo é a força
+                  motriz por trás da modernização dos processos da ACDOMZ. Com um olhar técnico
+                  apurado, ele é responsável por supervisionar a manutenção predial, a gestão de
+                  obras e o gerenciamento eficiente de recursos e ativos, garantindo a integridade
+                  física e a valorização contínua dos condomínios.
+                </div>
+                <div>
+                  <br />
+                </div>
+                <div>
+                  Sua especialização em Inteligência Artificial aplicada à gestão condominial coloca
+                  a empresa na vanguarda do setor. Carlos desenvolve e implementa estratégias que
+                  utilizam dados para antecipar problemas, otimizar custos de manutenção e melhorar
+                  a comunicação. É a tecnologia trabalhando a favor da convivência e da segurança.
+                </div>
+                <div>
+                  <br />
+                </div>
+                <div>
+                  Liderando também a gestão de pessoas, Carlos conecta a precisão técnica da
+                  engenharia com a sensibilidade necessária para lidar com equipes e fornecedores.
+                  Seu trabalho reflete diretamente os valores de ética, transparência e excelência
+                  da ACDOMZ, assegurando que cada solução técnica adotada seja não apenas moderna,
+                  mas também sustentável e benéfica para toda a comunidade condominial.
+                </div>
               </div>
             </div>
 
             {/* Founder 2: Carlos Eduardo Model */}
             <div className="group mt-12 md:mt-24">
               <div className="relative h-[500px] mb-8 overflow-hidden rounded-sm">
-                <img
-                  src="https://img.usecurling.com/ppl/large?gender=male&seed=30"
-                  alt="Carlos Eduardo Model"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <div className="flex items-center gap-3 mb-2">
-                    <HardHat className="text-primary w-5 h-5" />
-                    <span className="text-primary tracking-widest uppercase text-xs">
-                      Diretoria Técnica
-                    </span>
-                  </div>
-                  <h2 className="text-3xl font-serif text-white mb-1">Carlos Eduardo Model</h2>
-                  <p className="text-primary font-mono text-sm tracking-wider">CREA/PR 222741/D</p>
-                </div>
+                <span>CO-Fundador</span>
               </div>
 
               <div className="space-y-8 pr-4">

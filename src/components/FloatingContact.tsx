@@ -20,7 +20,7 @@ export default function FloatingContact() {
           rel="noopener noreferrer"
           className="flex items-center gap-3 bg-secondary text-white px-4 py-3 rounded-full hover:bg-secondary/80 transition-colors shadow-lg shadow-black/50"
         >
-          <span className="text-sm font-medium whitespace-nowrap">WhatsApp 1</span>
+          <span className="text-sm font-medium whitespace-nowrap">Contato 01</span>
           <MessageCircle className="w-5 h-5" />
         </a>
         <a
