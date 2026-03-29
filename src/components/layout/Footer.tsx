@@ -1,124 +1,152 @@
 import { Link } from 'react-router-dom'
-import { MapPin, Mail, Phone, Instagram, Linkedin } from 'lucide-react'
+import { Mail, MapPin, Phone, Instagram, Linkedin, Facebook } from 'lucide-react'
+import logoImg from '@/assets/logo-fundo-azul-9ce9b.jpeg'
 
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="bg-background border-t border-white/10 pt-20 pb-10">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-[#062945] text-white border-t border-[#c2b28f]/20 pt-16 pb-8 mt-auto">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand Info */}
           <div className="space-y-6">
-            <div className="flex items-center justify-center w-[200px] h-[60px] border border-primary/20 bg-secondary/50">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45">
-                  <span className="font-serif text-primary text-lg -rotate-45 font-bold">A</span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="font-serif text-xl tracking-widest font-bold uppercase leading-none text-white">
-                    ACDOM<span className="text-primary">Z</span>
-                  </span>
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
-                    Gestão Condominial
-                  </span>
-                </div>
-              </div>
-            </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Gestão Condominial Moderna e Humanizada de A a Z. Elevando o padrão do seu condomínio
-              com excelência técnica e administrativa.
+            <Link to="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img
+                src={logoImg}
+                alt="ACDOMZ Gestão Condominial"
+                className="w-[200px] h-[60px] object-contain rounded-md"
+              />
+            </Link>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Gestão condominial de alto padrão em Curitiba. Excelência, transparência e valorização
+              do seu patrimônio com atendimento personalizado e exclusivo.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/acdomz.gc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                href="#"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-full bg-[#c2b28f]/10 flex items-center justify-center text-[#c2b28f] hover:bg-[#c2b28f] hover:text-[#062945] transition-all duration-300"
               >
-                <Instagram className="w-4 h-4" />
-                <span className="sr-only">Instagram</span>
+                <Instagram size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/company/acdomz-gest%C3%A3o-condominial/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                href="#"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-full bg-[#c2b28f]/10 flex items-center justify-center text-[#c2b28f] hover:bg-[#c2b28f] hover:text-[#062945] transition-all duration-300"
               >
-                <Linkedin className="w-4 h-4" />
-                <span className="sr-only">LinkedIn</span>
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="w-10 h-10 rounded-full bg-[#c2b28f]/10 flex items-center justify-center text-[#c2b28f] hover:bg-[#c2b28f] hover:text-[#062945] transition-all duration-300"
+              >
+                <Facebook size={20} />
               </a>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-white">Links Rápidos</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <h3 className="text-[#c2b28f] font-semibold text-lg mb-6 uppercase tracking-wider">
+              Links Rápidos
+            </h3>
+            <ul className="space-y-4">
               <li>
-                <Link to="/sobre" className="hover:text-primary transition-colors">
-                  Nossa Filosofia
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:text-[#c2b28f] transition-colors flex items-center gap-2 text-sm font-medium"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Início
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="hover:text-primary transition-colors">
-                  Soluções
+                <Link
+                  to="/sobre"
+                  className="text-gray-300 hover:text-[#c2b28f] transition-colors flex items-center gap-2 text-sm font-medium"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Sobre Nós
                 </Link>
               </li>
               <li>
-                <Link to="/fundadores" className="hover:text-primary transition-colors">
-                  Liderança
+                <Link
+                  to="/servicos"
+                  className="text-gray-300 hover:text-[#c2b28f] transition-colors flex items-center gap-2 text-sm font-medium"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Serviços
                 </Link>
               </li>
               <li>
-                <Link to="/depoimentos" className="hover:text-primary transition-colors">
-                  Vozes da Excelência
+                <Link
+                  to="/contato"
+                  className="text-gray-300 hover:text-[#c2b28f] transition-colors flex items-center gap-2 text-sm font-medium"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Contato
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Services */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-white">Serviços</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>Sindicatura Profissional Curitiba</li>
-              <li>Laudos de Engenharia Condomínios</li>
-              <li>Gestão Financeira Transparente</li>
-              <li>Manutenção Predial Preventiva</li>
+            <h3 className="text-[#c2b28f] font-semibold text-lg mb-6 uppercase tracking-wider">
+              Nossos Serviços
+            </h3>
+            <ul className="space-y-4">
+              <li className="text-gray-300 flex items-center gap-2 text-sm font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Gestão Administrativa
+              </li>
+              <li className="text-gray-300 flex items-center gap-2 text-sm font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Gestão Financeira
+              </li>
+              <li className="text-gray-300 flex items-center gap-2 text-sm font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Manutenção Predial
+              </li>
+              <li className="text-gray-300 flex items-center gap-2 text-sm font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Assessoria Jurídica
+              </li>
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-white">Contato</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+            <h3 className="text-[#c2b28f] font-semibold text-lg mb-6 uppercase tracking-wider">
+              Contato
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-gray-300 text-sm font-medium">
+                <MapPin className="text-[#c2b28f] shrink-0 mt-0.5" size={18} />
                 <span>
-                  Rua Oscar Borges de Macedo Ribas 135
+                  Batel - Curitiba - PR
                   <br />
-                  Curitiba, PR
+                  CEP 80000-000
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>acdomz.gc@gmail.com</span>
+              <li className="flex items-center gap-3 text-gray-300 text-sm font-medium">
+                <Phone className="text-[#c2b28f] shrink-0" size={18} />
+                <span>(41) 3000-0000</span>
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span>(41) 98732-2926</span>
-                  <span>(41) 99102-1963</span>
-                </div>
+              <li className="flex items-center gap-3 text-gray-300 text-sm font-medium">
+                <Mail className="text-[#c2b28f] shrink-0" size={18} />
+                <span>contato@acdomz.com.br</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>
-            &copy; {new Date().getFullYear()} ACDOMZ Gestão Condominial. Todos os direitos
-            reservados.
+        <div className="border-t border-[#c2b28f]/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-400">
+            © {currentYear} ACDOMZ Gestão Condominial. Todos os direitos reservados.
           </p>
-          <p className="sr-only">
-            Especialistas em Síndico Profissional Curitiba, Laudos engenharia condomínios Curitiba e
-            Gestão condominial Curitiba de alto padrão.
-          </p>
+          <div className="flex gap-6 text-sm text-gray-400 font-medium">
+            <Link to="/privacidade" className="hover:text-[#c2b28f] transition-colors">
+              Política de Privacidade
+            </Link>
+            <Link to="/termos" className="hover:text-[#c2b28f] transition-colors">
+              Termos de Uso
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

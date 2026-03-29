@@ -1,17 +1,17 @@
 import { Outlet } from 'react-router-dom'
 import { Navbar } from './layout/Navbar'
 import { Footer } from './layout/Footer'
-import FloatingContact from './FloatingContact'
+import { Toaster } from '@/components/ui/sonner'
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen relative bg-black">
+    <div className="flex min-h-screen flex-col font-sans bg-white">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
-      <FloatingContact />
+      <Toaster />
     </div>
   )
 }

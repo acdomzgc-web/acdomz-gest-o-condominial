@@ -1,166 +1,136 @@
 import { Link } from 'react-router-dom'
-import { Building2, Wrench, ShieldCheck, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ArrowRight, ShieldCheck, Building, Users, Clock } from 'lucide-react'
+import logoImg from '@/assets/logo-fundo-azul-9ce9b.jpeg'
 
 export default function Index() {
   return (
-    <div className="animate-fade-slide-up">
+    <div className="flex flex-col min-h-screen pt-[72px] md:pt-[92px]">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/1920/1080?q=luxury%20city%20night&color=black')] bg-cover bg-center bg-fixed" />
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
+      <section className="relative bg-[#062945] text-white py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://img.usecurling.com/p/1920/1080?q=luxury%20condominium&color=black"
+            alt="Condomínio de Alto Padrão"
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#062945] via-[#062945]/90 to-transparent" />
+        </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <span className="block text-primary uppercase tracking-[0.3em] text-sm mb-6 animate-fade-slide-up stagger-1">
-            Gestão Elite Curitiba
-          </span>
-          <div className="flex items-center justify-center mb-10 animate-fade-slide-up">
-            <div className="flex items-center justify-center w-[200px] h-[60px] border border-primary/20 bg-secondary/30 backdrop-blur-md">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45">
-                  <span className="font-serif text-primary text-lg -rotate-45 font-bold">A</span>
-                </div>
-                <div className="flex flex-col justify-center text-left">
-                  <span className="font-serif text-xl tracking-widest font-bold uppercase leading-none text-white">
-                    ACDOM<span className="text-primary">Z</span>
-                  </span>
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
-                    Gestão Condominial
-                  </span>
-                </div>
-              </div>
+        <div className="container relative z-10 mx-auto px-4 md:px-6">
+          <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="mb-8 inline-block p-4 bg-[#062945]/60 backdrop-blur-md rounded-xl border border-[#c2b28f]/20 shadow-2xl">
+              <img
+                src={logoImg}
+                alt="ACDOMZ Gestão Condominial"
+                className="w-[280px] md:w-[320px] h-auto object-contain rounded-lg"
+              />
             </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 max-w-4xl mx-auto leading-tight animate-fade-slide-up stagger-2">
-            Gestão de A a Z com Excelência
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-slide-up stagger-3 font-light leading-relaxed">
-            Nosso objetivo não é apenas administrar prédios, mas cuidar do lugar onde a vida
-            acontece. Unimos técnica e humanidade para garantir que seu lar seja seu porto seguro.
-          </p>
-          <div className="animate-fade-slide-up stagger-3 mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none uppercase tracking-widest px-8 py-6 h-auto transition-all duration-300"
-            >
-              <Link to="/servicos">Conheça Nossas Soluções</Link>
-            </Button>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Excelência e <span className="text-[#c2b28f]">Exclusividade</span> na Gestão do seu
+              Patrimônio
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+              Administração condominial premium em Curitiba. Transparência, inovação e um
+              atendimento personalizado para condomínios que exigem o melhor.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#c2b28f] text-[#062945] hover:bg-[#a89b78] text-base font-semibold px-8 h-14 border-none shadow-lg"
+              >
+                <Link to="/contato">
+                  Solicitar Proposta <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="border-[#c2b28f] text-[#c2b28f] hover:bg-[#c2b28f] hover:text-[#062945] text-base font-semibold px-8 h-14 bg-transparent backdrop-blur-sm"
+              >
+                <Link to="/servicos">Conhecer Serviços</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Concept Section */}
-      <section className="py-32 bg-dark-blue-gradient">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6 text-white">A Filosofia ACDOMZ</h2>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-              Mais do que um nome, ACDOMZ carrega em sua essência a identidade de seus fundadores,
-              Adir Ailson Model e Carlos Eduardo Model, unidos pelo propósito de cuidar do que é
-              mais importante: o seu lar. A união da experiência administrativa de Adir com a visão
-              inovadora de Carlos resultou em uma empresa que entende o condomínio não apenas como
-              uma estrutura física, mas como um espaço vivo de convivência e patrimônio familiar.
+      {/* Differentials Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-[#062945] text-3xl md:text-4xl font-bold mb-4">
+              Por que escolher a ACDOMZ?
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Nosso compromisso é elevar o padrão de vida no seu condomínio com uma gestão
+              inteligente, presente e focada em resultados.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div className="glass-panel p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
-              <Building2 className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-serif mb-4">Modernidade</h3>
-              <p className="text-muted-foreground">
-                Processos ágeis, tecnologia de ponta e transparência total em tempo real para o seu
-                condomínio.
-              </p>
-            </div>
-            <div className="glass-panel p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-colors">
-              <Users className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-serif mb-4">Humanização</h3>
-              <p className="text-muted-foreground">
-                Entendemos que gerimos lares. Respeito, empatia e comunicação clara são os pilares
-                de nossa atuação.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Highlights */}
-      <section className="py-32 bg-radial-gradient">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <span className="text-primary uppercase tracking-widest text-sm mb-4 block">
-                Expertise
-              </span>
-              <h2 className="text-4xl md:text-5xl font-serif text-white">Nossos Pilares</h2>
-            </div>
-            <Link
-              to="/servicos"
-              className="text-primary uppercase tracking-widest text-sm hover:text-white transition-colors border-b border-primary pb-1"
-            >
-              Ver todos os serviços
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: ShieldCheck,
-                title: 'Sindicatura',
-                desc: 'Gestão executiva completa com foco em valorização patrimonial e mediação de conflitos.',
+                title: 'Transparência Total',
+                desc: 'Acesso a todas as informações financeiras em tempo real através do nosso app exclusivo.',
               },
               {
-                icon: Wrench,
-                title: 'Engenharia',
-                desc: 'Laudos técnicos, manutenção preventiva e acompanhamento rigoroso de obras estruturais.',
+                icon: Building,
+                title: 'Manutenção Preventiva',
+                desc: 'Cronograma rigoroso de manutenções para valorizar e preservar o patrimônio do condomínio.',
               },
               {
-                icon: Building2,
-                title: 'Gestão',
-                desc: 'Administração financeira transparente, contabilidade impecável e conformidade legal.',
+                icon: Users,
+                title: 'Atendimento Premium',
+                desc: 'Equipe dedicada e síndicos profissionais com vasta experiência em condomínios de alto padrão.',
               },
-            ].map((srv, i) => (
+              {
+                icon: Clock,
+                title: 'Suporte 24/7',
+                desc: 'Atendimento emergencial a qualquer hora do dia ou da noite para tranquilidade total dos moradores.',
+              },
+            ].map((feature, i) => (
               <div
                 key={i}
-                className="border border-white/10 p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 bg-secondary/30"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <srv.icon className="w-10 h-10 text-primary mb-8" />
-                <h3 className="text-xl font-serif mb-4 text-white">{srv.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{srv.desc}</p>
+                <div className="w-14 h-14 bg-[#062945]/5 rounded-xl flex items-center justify-center mb-6">
+                  <feature.icon className="h-7 w-7 text-[#c2b28f]" />
+                </div>
+                <h3 className="text-[#062945] text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="py-20 border-t border-white/10 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-gray-500 uppercase tracking-widest text-xs mb-10 block">
-            Padrão de Qualidade Reconhecido
-          </span>
-          <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-            <img
-              src="https://img.usecurling.com/i?q=luxury%20brand%20logo&color=white&shape=outline"
-              alt="Partner Logo"
-              className="h-12 object-contain"
-            />
-            <img
-              src="https://img.usecurling.com/i?q=real%20estate%20logo&color=white&shape=lineal-color"
-              alt="Partner Logo"
-              className="h-12 object-contain"
-            />
-            <img
-              src="https://img.usecurling.com/i?q=building%20trust&color=white&shape=outline"
-              alt="Partner Logo"
-              className="h-12 object-contain"
-            />
-            <img
-              src="https://img.usecurling.com/i?q=premium%20quality&color=white&shape=outline"
-              alt="Partner Logo"
-              className="h-12 object-contain"
-            />
+      {/* CTA Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="bg-[#062945] rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/1000/500?q=architecture&color=blue')] opacity-10 mix-blend-overlay object-cover w-full h-full"></div>
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                Pronto para transformar a gestão do seu condomínio?
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 mb-10">
+                Agende uma reunião com nossos especialistas e descubra como a ACDOMZ pode valorizar
+                o seu patrimônio com excelência, segurança e exclusividade.
+              </p>
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#c2b28f] text-[#062945] hover:bg-[#a89b78] text-base font-semibold px-10 h-14 border-none shadow-lg"
+              >
+                <Link to="/contato">Falar com um Especialista</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

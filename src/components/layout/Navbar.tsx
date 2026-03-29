@@ -1,169 +1,111 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
+import logoImg from '@/assets/logo-fundo-azul-9ce9b.jpeg'
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Sobre', path: '/sobre' },
-  { name: 'Fundadores', path: '/fundadores' },
+  { name: 'Início', path: '/' },
+  { name: 'Sobre Nós', path: '/sobre' },
   { name: 'Serviços', path: '/servicos' },
   { name: 'Depoimentos', path: '/depoimentos' },
+  { name: 'Contato', path: '/contato' },
 ]
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => {
-    setMobileMenuOpen(false)
-  }, [location.pathname])
-
   return (
     <header
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent',
-        scrolled ? 'bg-background/90 backdrop-blur-md border-white/10 py-4' : 'bg-transparent py-6',
+        'fixed top-0 w-full z-50 transition-all duration-300 border-b border-[#c2b28f]/20',
+        scrolled ? 'bg-[#062945] shadow-lg py-2' : 'bg-[#062945] py-4',
       )}
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <Link
-          to="/"
-          className="flex items-center justify-center w-[200px] h-[60px] group border border-primary/20 hover:border-primary/50 transition-colors bg-secondary/50 backdrop-blur-sm"
-        >
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45 group-hover:bg-primary transition-colors duration-500">
-              <span className="font-serif text-primary text-lg -rotate-45 group-hover:text-primary-foreground font-bold">
-                A
-              </span>
-            </div>
-            <div className="flex flex-col justify-center">
-              <span className="font-serif text-xl tracking-widest font-bold uppercase leading-none text-white">
-                ACDOM<span className="text-primary">Z</span>
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
-                Gestão Condominial
-              </span>
-            </div>
-          </div>
-        </Link>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
+            <img
+              src={logoImg}
+              alt="ACDOMZ Gestão Condominial"
+              className="w-[200px] h-[60px] object-contain rounded-md shadow-sm"
+            />
+          </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={cn(
-                'text-sm uppercase tracking-wider transition-colors hover:text-primary',
-                location.pathname === link.path ? 'text-primary' : 'text-gray-300',
-              )}
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  'text-sm font-medium transition-colors hover:text-[#c2b28f]',
+                  location.pathname === link.path ? 'text-[#c2b28f]' : 'text-white',
+                )}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Button
+              asChild
+              className="bg-[#c2b28f] text-[#062945] hover:bg-[#a89b78] font-semibold border-none"
             >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
+              <Link to="/contato">Solicitar Proposta</Link>
+            </Button>
+          </nav>
 
-        <div className="hidden lg:flex items-center gap-6">
-          <div className="flex items-center gap-4 border-r border-white/10 pr-6">
-            <a
-              href="https://www.instagram.com/acdomz.gc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-              <span className="sr-only">Instagram</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/acdomz-gest%C3%A3o-condominial/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect width="4" height="12" x="2" y="9" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              <span className="sr-only">LinkedIn</span>
-            </a>
-          </div>
-          <Button
-            asChild
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-wider rounded-none px-6 bg-secondary/50 backdrop-blur-sm"
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-white hover:text-[#c2b28f] transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Alternar menu"
           >
-            <Link to="/contato">Solicitar Consultoria</Link>
-          </Button>
-        </div>
-
-        <div className="lg:hidden">
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white hover:text-primary">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="bg-background/95 backdrop-blur-xl border-l border-white/10 p-0 w-full sm:max-w-sm"
-            >
-              <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
-              <div className="flex flex-col h-full justify-center items-center gap-8 p-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="font-serif text-3xl hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-                <Link
-                  to="/contato"
-                  className="mt-8 font-serif text-2xl text-primary border-b border-primary pb-1"
-                >
-                  Contato
-                </Link>
-              </div>
-            </SheetContent>
-          </Sheet>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#062945] border-t border-[#c2b28f]/20 shadow-xl animate-in slide-in-from-top-2">
+          <nav className="flex flex-col p-4 space-y-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  'px-4 py-3 rounded-md transition-colors text-base font-medium',
+                  location.pathname === link.path
+                    ? 'bg-[#c2b28f]/10 text-[#c2b28f]'
+                    : 'text-white hover:bg-white/5',
+                )}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Button
+              asChild
+              className="w-full bg-[#c2b28f] text-[#062945] hover:bg-[#a89b78] mt-4 font-semibold h-12"
+            >
+              <Link to="/contato" onClick={() => setIsOpen(false)}>
+                Solicitar Proposta
+              </Link>
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
