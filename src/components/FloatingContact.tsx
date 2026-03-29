@@ -34,14 +34,14 @@ export default function FloatingContact() {
         </a>
         <a
           href="mailto:acdomz.gc@gmail.com"
-          className="flex items-center gap-3 bg-[#1A1A1A] border border-white/10 text-white px-4 py-3 rounded-full hover:bg-white/10 transition-colors shadow-lg shadow-black/50"
+          className="flex items-center gap-3 bg-secondary/80 border border-white/10 text-white px-4 py-3 rounded-full hover:bg-white/10 transition-colors shadow-lg shadow-black/50"
         >
           <span className="text-sm font-medium whitespace-nowrap">E-mail</span>
           <Mail className="w-5 h-5 text-primary" />
         </a>
         <a
           href="tel:+5541987322926"
-          className="flex items-center gap-3 bg-[#1A1A1A] border border-white/10 text-white px-4 py-3 rounded-full hover:bg-white/10 transition-colors shadow-lg shadow-black/50"
+          className="flex items-center gap-3 bg-secondary/80 border border-white/10 text-white px-4 py-3 rounded-full hover:bg-white/10 transition-colors shadow-lg shadow-black/50"
         >
           <span className="text-sm font-medium whitespace-nowrap">Ligar</span>
           <PhoneCall className="w-5 h-5 text-primary" />
@@ -51,7 +51,7 @@ export default function FloatingContact() {
       {/* Main Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-primary text-black rounded-full flex items-center justify-center shadow-2xl hover:scale-105 transition-all duration-300 z-50 focus:outline-none"
+        className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-2xl hover:scale-105 transition-all duration-300 z-50 focus:outline-none"
         aria-label="Opções de Contato"
       >
         {isOpen ? <X className="w-8 h-8" /> : <Phone className="w-8 h-8" />}

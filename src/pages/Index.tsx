@@ -8,14 +8,14 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/1920/1080?q=luxury%20city%20night&color=black')] bg-cover bg-center bg-fixed" />
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <span className="block text-primary uppercase tracking-[0.3em] text-sm mb-6 animate-fade-slide-up stagger-1">
             Gestão Elite Curitiba
           </span>
           <div className="flex items-center justify-center mb-10 animate-fade-slide-up">
-            <div className="flex items-center justify-center w-[200px] h-[60px] border border-primary/20 bg-black/30 backdrop-blur-md">
+            <div className="flex items-center justify-center w-[200px] h-[60px] border border-primary/20 bg-secondary/30 backdrop-blur-md">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45">
                   <span className="font-serif text-primary text-lg -rotate-45 font-bold">A</span>
@@ -42,8 +42,9 @@ export default function Index() {
             <Button
               asChild
               size="lg"
-              className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-black rounded-none uppercase tracking-widest px-8 py-6 h-auto transition-all duration-300"
+              className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none uppercase tracking-widest px-8 py-6 h-auto transition-all duration-300"
             >
+              {' '}
               <Link to="/servicos">Conheça Nossas Soluções</Link>
             </Button>
           </div>
@@ -123,7 +124,7 @@ export default function Index() {
             ].map((srv, i) => (
               <div
                 key={i}
-                className="border border-white/10 p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 bg-[#0a0a0a]"
+                className="border border-white/10 p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 bg-secondary/30"
               >
                 <srv.icon className="w-10 h-10 text-primary mb-8" />
                 <h3 className="text-xl font-serif mb-4 text-white">{srv.title}</h3>
@@ -135,7 +136,7 @@ export default function Index() {
       </section>
 
       {/* Trust Bar */}
-      <section className="py-20 border-t border-white/10 bg-black">
+      <section className="py-20 border-t border-white/10 bg-background">
         <div className="container mx-auto px-4 text-center">
           <span className="text-gray-500 uppercase tracking-widest text-xs mb-10 block">
             Padrão de Qualidade Reconhecido

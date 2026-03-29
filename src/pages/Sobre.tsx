@@ -6,7 +6,7 @@ export default function Sobre() {
       {/* Hero */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/1920/800?q=luxury%20hall%20interior&color=black')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
 
         <div className="relative z-10 container text-center px-4">
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">Quem Somos</h1>
@@ -56,7 +56,7 @@ export default function Sobre() {
               },
             ].map((item, i) => (
               <div key={i} className="border-l border-primary/30 pl-8 py-4 relative group">
-                <div className="absolute -left-[17px] top-6 w-8 h-8 rounded-full bg-black border-2 border-primary flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
+                <div className="absolute -left-[17px] top-6 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
                 <item.icon className="w-8 h-8 text-primary mb-6" />
@@ -69,7 +69,7 @@ export default function Sobre() {
       </section>
 
       {/* Timeline */}
-      <section className="py-32 bg-[#050505] border-t border-white/5">
+      <section className="py-32 bg-background border-t border-white/5">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-serif mb-16 text-center text-white">
             Nossa Trajetória
@@ -102,7 +102,7 @@ export default function Sobre() {
                 key={i}
                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
               >
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/50 bg-black text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:border-primary group-hover:text-primary transition-colors duration-300 z-10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/50 bg-secondary text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:border-primary group-hover:text-primary transition-colors duration-300 z-10">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded border border-white/10 bg-white/5 backdrop-blur-sm group-hover:border-primary/50 transition-colors">

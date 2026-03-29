@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function Depoimentos() {
   return (
-    <div className="animate-fade-slide-up pt-24 min-h-screen bg-black flex flex-col justify-center">
+    <div className="animate-fade-slide-up pt-24 min-h-screen bg-background flex flex-col justify-center">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <span className="text-primary uppercase tracking-widest text-sm mb-4 block">
@@ -60,7 +60,7 @@ export default function Depoimentos() {
             <CarouselContent className="-ml-4 md:-ml-8">
               {testimonials.map((test, index) => (
                 <CarouselItem key={index} className="pl-4 md:pl-8 md:basis-1/2 lg:basis-1/2">
-                  <div className="h-full border border-white/10 bg-[#0a0a0a] p-10 flex flex-col justify-between hover:border-primary/30 transition-colors">
+                  <div className="h-full border border-white/10 bg-secondary/30 p-10 flex flex-col justify-between hover:border-primary/30 transition-colors">
                     <div>
                       <div className="flex gap-1 mb-6">
                         {[1, 2, 3, 4, 5].map((star) => (
@@ -84,8 +84,8 @@ export default function Depoimentos() {
             </CarouselContent>
 
             <div className="flex justify-center gap-4 mt-12 relative h-12">
-              <CarouselPrevious className="relative left-0 top-0 translate-y-0 translate-x-0 bg-transparent border-white/20 text-white hover:bg-primary hover:text-black hover:border-primary w-12 h-12" />
-              <CarouselNext className="relative right-0 top-0 translate-y-0 translate-x-0 bg-transparent border-white/20 text-white hover:bg-primary hover:text-black hover:border-primary w-12 h-12" />
+              <CarouselPrevious className="relative left-0 top-0 translate-y-0 translate-x-0 bg-transparent border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary w-12 h-12" />
+              <CarouselNext className="relative right-0 top-0 translate-y-0 translate-x-0 bg-transparent border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary w-12 h-12" />
             </div>
           </Carousel>
         </div>

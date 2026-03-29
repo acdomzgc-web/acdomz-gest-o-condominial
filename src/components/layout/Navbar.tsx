@@ -32,17 +32,17 @@ export function Navbar() {
     <header
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent',
-        scrolled ? 'bg-black/90 backdrop-blur-md border-white/10 py-4' : 'bg-transparent py-6',
+        scrolled ? 'bg-background/90 backdrop-blur-md border-white/10 py-4' : 'bg-transparent py-6',
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center justify-center w-[200px] h-[60px] group border border-primary/20 hover:border-primary/50 transition-colors bg-black/50 backdrop-blur-sm"
+          className="flex items-center justify-center w-[200px] h-[60px] group border border-primary/20 hover:border-primary/50 transition-colors bg-secondary/50 backdrop-blur-sm"
         >
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45 group-hover:bg-primary transition-colors duration-500">
-              <span className="font-serif text-primary text-lg -rotate-45 group-hover:text-black font-bold">
+              <span className="font-serif text-primary text-lg -rotate-45 group-hover:text-primary-foreground font-bold">
                 A
               </span>
             </div>
@@ -124,7 +124,7 @@ export function Navbar() {
           <Button
             asChild
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-black uppercase tracking-wider rounded-none px-6 bg-black/50 backdrop-blur-sm"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-wider rounded-none px-6 bg-secondary/50 backdrop-blur-sm"
           >
             <Link to="/contato">Solicitar Consultoria</Link>
           </Button>
@@ -140,7 +140,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="bg-black/95 backdrop-blur-xl border-l border-white/10 p-0 w-full sm:max-w-sm"
+              className="bg-background/95 backdrop-blur-xl border-l border-white/10 p-0 w-full sm:max-w-sm"
             >
               <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
               <div className="flex flex-col h-full justify-center items-center gap-8 p-8">

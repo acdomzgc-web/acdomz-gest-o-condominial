@@ -26,14 +26,14 @@ export default function Contato() {
       toast({
         title: 'Solicitação Enviada',
         description: 'Em breve um de nossos especialistas entrará em contato.',
-        className: 'bg-black border-primary text-white',
+        className: 'bg-secondary border-primary text-white',
       })
       ;(e.target as HTMLFormElement).reset()
     }, 1500)
   }
 
   return (
-    <div className="animate-fade-slide-up pt-24 min-h-screen bg-black">
+    <div className="animate-fade-slide-up pt-24 min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info & Map */}
@@ -109,7 +109,7 @@ export default function Contato() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-[#0a0a0a] border border-white/10 p-8 md:p-12">
+          <div className="bg-secondary/30 border border-white/10 p-8 md:p-12">
             <h2 className="text-2xl font-serif text-white mb-8">Envie uma Mensagem</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -156,7 +156,7 @@ export default function Contato() {
                   <SelectTrigger className="bg-transparent border-white/20 text-white focus:ring-primary h-12 rounded-none">
                     <SelectValue placeholder="Selecione o serviço..." />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#0a0a0a] border-white/20 text-white">
+                  <SelectContent className="bg-secondary border-white/20 text-white">
                     <SelectItem value="sindicatura">Sindicatura Profissional</SelectItem>
                     <SelectItem value="engenharia">Laudos de Engenharia</SelectItem>
                     <SelectItem value="manutencao">Manutenção Predial</SelectItem>
@@ -173,7 +173,7 @@ export default function Contato() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary text-black hover:bg-white rounded-none h-14 uppercase tracking-widest transition-colors duration-300 mt-4"
+                className="w-full bg-primary text-primary-foreground hover:bg-white hover:text-black rounded-none h-14 uppercase tracking-widest transition-colors duration-300 mt-4"
               >
                 {isSubmitting ? 'Enviando...' : 'Solicitar Contato'}
               </Button>

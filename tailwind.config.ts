@@ -65,9 +65,9 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       backgroundImage: {
-        'radial-gradient': 'radial-gradient(circle at center, #1A1A1A 0%, #000000 100%)',
-        'blue-gradient': 'linear-gradient(135deg, #000000 0%, #1E3A8A 100%)',
-        'dark-blue-gradient': 'radial-gradient(circle at top right, #1E3A8A 0%, #000000 60%)',
+        'radial-gradient': 'radial-gradient(circle at center, #062945 0%, #02101c 100%)',
+        'blue-gradient': 'linear-gradient(135deg, #02101c 0%, #062945 100%)',
+        'dark-blue-gradient': 'radial-gradient(circle at top right, #062945 0%, #02101c 60%)',
       },
     },
   },

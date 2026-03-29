@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 207 84% 5%; /* Very Dark Navy */
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 10%;
+    --card: 207 84% 10%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 10%;
+    --popover: 207 84% 10%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 43 65% 53%; /* #D4AF37 Gold */
-    --primary-foreground: 0 0% 0%;
+    --primary: 43 32% 66%; /* #c2b28f Champagne Gold */
+    --primary-foreground: 207 84% 15%; /* #062945 Deep Navy Blue */
 
-    --secondary: 224 64% 33%; /* #1E3A8A Dark Blue */
+    --secondary: 207 84% 15%; /* #062945 Deep Navy Blue */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 207 50% 15%;
+    --muted-foreground: 207 20% 70%;
 
-    --accent: 43 65% 53%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 43 32% 66%;
+    --accent-foreground: 207 84% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 43 65% 53%;
+    --border: 43 32% 30%;
+    --input: 207 50% 15%;
+    --ring: 43 32% 66%;
 
     --radius: 0rem;
   }
@@ -57,15 +57,15 @@
 
 @layer utilities {
   .text-gold-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#c2b28f] to-[#e6dcc5];
   }
 
   .bg-gold-gradient {
-    @apply bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB];
+    @apply bg-gradient-to-r from-[#c2b28f] to-[#e6dcc5];
   }
 
   .glass-panel {
-    @apply bg-black/40 backdrop-blur-md border border-white/10;
+    @apply bg-[#062945]/40 backdrop-blur-md border border-[#c2b28f]/20;
   }
 
   @keyframes fade-slide-up {

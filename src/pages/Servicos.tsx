@@ -48,7 +48,7 @@ const services = [
 
 export default function Servicos() {
   return (
-    <div className="animate-fade-slide-up pt-24 min-h-screen bg-[#050505]">
+    <div className="animate-fade-slide-up pt-24 min-h-screen bg-background">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-12 gap-16 items-start">
           {/* Header Column */}
@@ -66,7 +66,7 @@ export default function Servicos() {
             </p>
             <Button
               asChild
-              className="bg-primary text-black hover:bg-white hover:text-black rounded-none uppercase tracking-widest px-8 py-6 h-auto transition-all duration-300"
+              className="bg-primary text-primary-foreground hover:bg-white hover:text-black rounded-none uppercase tracking-widest px-8 py-6 h-auto transition-all duration-300"
             >
               <Link to="/contato">Agende uma Consulta</Link>
             </Button>
@@ -79,7 +79,7 @@ export default function Servicos() {
                 <AccordionItem
                   key={service.id}
                   value={service.id}
-                  className="border-white/10 mb-6 bg-black/40 backdrop-blur-sm px-6"
+                  className="border-white/10 mb-6 bg-secondary/40 backdrop-blur-sm px-6"
                 >
                   <AccordionTrigger className="text-xl md:text-2xl font-serif text-white hover:text-primary hover:no-underline py-6 text-left">
                     <span className="flex items-center gap-4">
