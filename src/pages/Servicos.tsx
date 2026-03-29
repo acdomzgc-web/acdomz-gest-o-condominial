@@ -16,9 +16,15 @@ const services = [
   },
   {
     id: 'engenharia',
-    title: 'Laudos de Engenharia',
+    title: 'Laudos de Engenharia & Prevenção',
     content:
-      'Não dependemos de terceiros para avaliar a saúde do seu prédio. Nossos fundadores possuem expertise para emissão de laudos técnicos, inspeções prediais detalhadas e acompanhamento rigoroso de obras estruturais, garantindo a máxima segurança.',
+      'Laudos de Engenharia: PIC, PPCI e AVCB por engenheiro certificado in-house. A sinergia entre nossa engenharia própria e a sindicatura garante que não dependemos de terceiros para avaliar a saúde do seu prédio, oferecendo acompanhamento rigoroso e a máxima segurança estrutural.',
+  },
+  {
+    id: 'abrangencia',
+    title: 'Gestão de Múltiplos Perfis',
+    content:
+      'Atendemos Condomínios Verticais e Horizontais: Residenciais, Mistos e Comerciais de alto padrão em Curitiba. Nossa metodologia se adapta perfeitamente às necessidades exclusivas de cada formato, sempre com excelência de A a Z.',
   },
   {
     id: 'manutencao',

@@ -66,6 +66,8 @@ export default {
       },
       backgroundImage: {
         'radial-gradient': 'radial-gradient(circle at center, #1A1A1A 0%, #000000 100%)',
+        'blue-gradient': 'linear-gradient(135deg, #000000 0%, #1E3A8A 100%)',
+        'dark-blue-gradient': 'radial-gradient(circle at top right, #1E3A8A 0%, #000000 60%)',
       },
     },
   },

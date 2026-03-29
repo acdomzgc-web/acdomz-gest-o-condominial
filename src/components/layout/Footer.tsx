@@ -7,13 +7,20 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45">
-                <span className="font-serif text-primary -rotate-45">A</span>
+            <div className="flex items-center justify-center w-[200px] h-[60px] border border-primary/20 bg-black/50">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45">
+                  <span className="font-serif text-primary text-lg -rotate-45 font-bold">A</span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <span className="font-serif text-xl tracking-widest font-bold uppercase leading-none text-white">
+                    ACDOM<span className="text-primary">Z</span>
+                  </span>
+                  <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
+                    Gestão Condominial
+                  </span>
+                </div>
               </div>
-              <span className="font-serif text-xl tracking-widest font-bold uppercase">
-                ACDOM<span className="text-primary">Z</span>
-              </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Gestão Condominial Moderna e Humanizada de A a Z. Elevando o padrão do seu condomínio
@@ -21,14 +28,18 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/acdomz.gc/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               >
                 <Instagram className="w-4 h-4" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/acdomz-gest%C3%A3o-condominial/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
@@ -86,11 +97,14 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>contato@acdomz.com.br</span>
+                <span>acdomz.gc@gmail.com</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>(41) 99999-9999</span>
+              <li className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <div className="flex flex-col">
+                  <span>(41) 98732-2926</span>
+                  <span>(41) 99102-1963</span>
+                </div>
               </li>
             </ul>
           </div>

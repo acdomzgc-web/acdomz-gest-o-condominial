@@ -17,17 +17,23 @@ export default function Sobre() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-32 bg-black">
+      <section className="py-32 bg-dark-blue-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-24">
             <h2 className="text-3xl md:text-5xl font-serif mb-8 text-white">
               A Filosofia de A a Z
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Acreditamos que gerir um condomínio vai muito além de planilhas e manutenções.
-              Trata-se de cuidar do patrimônio mais valioso das pessoas: seus lares. Nossa abordagem
-              premium garante que cada detalhe, desde a letra A até a Z, seja tratado com a máxima
-              excelência, unindo rigor de engenharia com sensibilidade humana.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Mais do que um nome, ACDOMZ carrega em sua essência a identidade de seus fundadores,
+              Adir Ailson Model e Carlos Eduardo Model, unidos pelo propósito de cuidar do que é
+              mais importante: o seu lar. A união da experiência administrativa de Adir com a visão
+              inovadora de Carlos resultou em uma empresa que entende o condomínio não apenas como
+              uma estrutura física, mas como um espaço vivo de convivência e patrimônio familiar.
+            </p>
+            <p className="text-xl text-primary font-serif italic">
+              "Nosso objetivo não é apenas administrar prédios, mas cuidar do lugar onde a vida
+              acontece. Unimos técnica e humanidade para garantir que seu lar seja seu porto
+              seguro."
             </p>
           </div>
 

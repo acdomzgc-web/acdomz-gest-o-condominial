@@ -67,8 +67,11 @@ export default function Contato() {
                 <div className="flex items-start gap-4">
                   <Phone className="text-primary w-6 h-6 mt-1" />
                   <div>
-                    <h3 className="text-white font-serif mb-1">Telefone / WhatsApp</h3>
-                    <p className="text-muted-foreground text-sm">(41) 99999-9999</p>
+                    <h3 className="text-white font-serif mb-1">Telefones / WhatsApp</h3>
+                    <p className="text-muted-foreground text-sm flex flex-col gap-1">
+                      <span>(41) 98732-2926</span>
+                      <span>(41) 99102-1963</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -77,7 +80,7 @@ export default function Contato() {
                   <Mail className="text-primary w-6 h-6 mt-1" />
                   <div>
                     <h3 className="text-white font-serif mb-1">Email</h3>
-                    <p className="text-muted-foreground text-sm">contato@acdomz.com.br</p>
+                    <p className="text-muted-foreground text-sm">acdomz.gc@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

@@ -14,10 +14,31 @@ export default function Index() {
           <span className="block text-primary uppercase tracking-[0.3em] text-sm mb-6 animate-fade-slide-up stagger-1">
             Gestão Elite Curitiba
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 max-w-4xl mx-auto leading-tight animate-fade-slide-up stagger-2">
-            ACDOM<span className="text-primary">Z</span>:<br /> Gestão de A a Z com Excelência
+          <div className="flex items-center justify-center mb-10 animate-fade-slide-up">
+            <div className="flex items-center justify-center w-[200px] h-[60px] border border-primary/20 bg-black/30 backdrop-blur-md">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45">
+                  <span className="font-serif text-primary text-lg -rotate-45 font-bold">A</span>
+                </div>
+                <div className="flex flex-col justify-center text-left">
+                  <span className="font-serif text-xl tracking-widest font-bold uppercase leading-none text-white">
+                    ACDOM<span className="text-primary">Z</span>
+                  </span>
+                  <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
+                    Gestão Condominial
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 max-w-4xl mx-auto leading-tight animate-fade-slide-up stagger-2">
+            Gestão de A a Z com Excelência
           </h1>
-          <div className="animate-fade-slide-up stagger-3 mt-12">
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-slide-up stagger-3 font-light leading-relaxed">
+            Nosso objetivo não é apenas administrar prédios, mas cuidar do lugar onde a vida
+            acontece. Unimos técnica e humanidade para garantir que seu lar seja seu porto seguro.
+          </p>
+          <div className="animate-fade-slide-up stagger-3 mt-8">
             <Button
               asChild
               size="lg"
@@ -30,16 +51,16 @@ export default function Index() {
       </section>
 
       {/* Concept Section */}
-      <section className="py-32 bg-black">
+      <section className="py-32 bg-dark-blue-gradient">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-serif mb-6 text-white">A Filosofia ACDOMZ</h2>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-              O nome reflete nosso propósito: <span className="text-white">A</span>dministração{' '}
-              <span className="text-white">C</span>ondominial <span className="text-white">D</span>e{' '}
-              <span className="text-white">O</span>tima <span className="text-white">M</span>aneira
-              de <span className="text-primary font-serif italic text-2xl">A a Z</span>. Unimos
-              precisão técnica com um toque humano inigualável.
+              Mais do que um nome, ACDOMZ carrega em sua essência a identidade de seus fundadores,
+              Adir Ailson Model e Carlos Eduardo Model, unidos pelo propósito de cuidar do que é
+              mais importante: o seu lar. A união da experiência administrativa de Adir com a visão
+              inovadora de Carlos resultou em uma empresa que entende o condomínio não apenas como
+              uma estrutura física, mas como um espaço vivo de convivência e patrimônio familiar.
             </p>
           </div>
 

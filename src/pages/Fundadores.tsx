@@ -18,7 +18,7 @@ export default function Fundadores() {
       </section>
 
       {/* Founders Profiles */}
-      <section className="py-20 bg-radial-gradient">
+      <section className="py-20 bg-dark-blue-gradient">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Founder 1 */}
@@ -37,16 +37,17 @@ export default function Fundadores() {
                       Diretoria Técnica
                     </span>
                   </div>
-                  <h2 className="text-3xl font-serif text-white">Roberto Almeida</h2>
+                  <h2 className="text-3xl font-serif text-white">Carlos Eduardo Model</h2>
                 </div>
               </div>
               <div className="pr-8">
-                <h3 className="text-xl text-white mb-4">Engenheiro Civil & Perito</h3>
+                <h3 className="text-xl text-white mb-4">Engenharia & Inovação</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Com mais de 15 anos de experiência na execução e auditoria de obras de alto
-                  padrão, Roberto traz o rigor técnico essencial para a manutenção preventiva do seu
-                  patrimônio. Sua expertise garante que laudos e inspeções sejam realizados com
-                  precisão milimétrica, antecipando problemas e gerando economia real.
+                  Com uma visão inovadora e foco no rigor técnico, Carlos traz a expertise da
+                  engenharia diretamente para a gestão do seu condomínio. Engenheiro certificado
+                  in-house, ele garante que emissões de laudos (PIC, PPCI, AVCB) e manutenções sejam
+                  realizadas com precisão milimétrica, assegurando a conformidade legal e a
+                  segurança estrutural do patrimônio.
                 </p>
                 <div className="h-px w-12 bg-primary" />
               </div>
@@ -68,16 +69,16 @@ export default function Fundadores() {
                       Diretoria Executiva
                     </span>
                   </div>
-                  <h2 className="text-3xl font-serif text-white">Carolina Macedo</h2>
+                  <h2 className="text-3xl font-serif text-white">Adir Ailson Model</h2>
                 </div>
               </div>
               <div className="pr-8">
-                <h3 className="text-xl text-white mb-4">Gestora Executiva & Síndica</h3>
+                <h3 className="text-xl text-white mb-4">Gestão Administrativa & Sindicatura</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Especialista em resolução de conflitos e gestão financeira otimizada. Carolina
-                  desenvolveu a metodologia de "Gestão Humanizada de A a Z", transformando a relação
-                  entre condomínio e administradora. Foco em transparência absoluta, comunicação
-                  clara e valorização do bem-estar dos moradores.
+                  Especialista em resolução de conflitos, gestão financeira otimizada e
+                  administração condominial. Adir desenvolveu a sólida base administrativa da
+                  ACDOMZ, priorizando a transparência absoluta, a comunicação clara e a valorização
+                  do bem-estar dos moradores, tratando cada condomínio como um verdadeiro lar.
                 </p>
                 <div className="h-px w-12 bg-primary" />
               </div>

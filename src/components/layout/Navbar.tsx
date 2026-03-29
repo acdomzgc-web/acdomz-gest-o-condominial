@@ -36,15 +36,25 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 border border-primary flex items-center justify-center rotate-45 group-hover:bg-primary transition-colors duration-500">
-            <span className="font-serif text-primary text-xl -rotate-45 group-hover:text-black">
-              A
-            </span>
+        <Link
+          to="/"
+          className="flex items-center justify-center w-[200px] h-[60px] group border border-primary/20 hover:border-primary/50 transition-colors bg-black/50 backdrop-blur-sm"
+        >
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 border border-primary flex items-center justify-center rotate-45 group-hover:bg-primary transition-colors duration-500">
+              <span className="font-serif text-primary text-lg -rotate-45 group-hover:text-black font-bold">
+                A
+              </span>
+            </div>
+            <div className="flex flex-col justify-center">
+              <span className="font-serif text-xl tracking-widest font-bold uppercase leading-none text-white">
+                ACDOM<span className="text-primary">Z</span>
+              </span>
+              <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
+                Gestão Condominial
+              </span>
+            </div>
           </div>
-          <span className="font-serif text-xl tracking-widest font-bold hidden sm:block uppercase">
-            ACDOM<span className="text-primary">Z</span>
-          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -62,11 +72,59 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-6">
+          <div className="flex items-center gap-4 border-r border-white/10 pr-6">
+            <a
+              href="https://www.instagram.com/acdomz.gc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-primary transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              <span className="sr-only">Instagram</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/acdomz-gest%C3%A3o-condominial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-primary transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <span className="sr-only">LinkedIn</span>
+            </a>
+          </div>
           <Button
             asChild
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-black uppercase tracking-wider rounded-none px-6"
+            className="border-primary text-primary hover:bg-primary hover:text-black uppercase tracking-wider rounded-none px-6 bg-black/50 backdrop-blur-sm"
           >
             <Link to="/contato">Solicitar Consultoria</Link>
           </Button>

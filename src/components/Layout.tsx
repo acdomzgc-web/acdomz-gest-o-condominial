@@ -1,24 +1,17 @@
-import { useEffect } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { Navbar } from './layout/Navbar'
 import { Footer } from './layout/Footer'
-import { ExitIntent } from './layout/ExitIntent'
+import FloatingContact from './FloatingContact'
 
 export default function Layout() {
-  const location = useLocation()
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [location.pathname])
-
   return (
-    <div className="flex flex-col min-h-screen bg-radial-gradient">
+    <div className="flex flex-col min-h-screen relative bg-black">
       <Navbar />
       <main className="flex-grow">
         <Outlet />
       </main>
       <Footer />
-      <ExitIntent />
+      <FloatingContact />
     </div>
   )
 }
