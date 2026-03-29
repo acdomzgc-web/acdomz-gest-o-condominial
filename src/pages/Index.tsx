@@ -19,11 +19,11 @@ export default function Index() {
 
         <div className="container relative z-10 mx-auto px-4 md:px-6">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-            <div className="mb-8 inline-block p-4 bg-[#062945]/60 backdrop-blur-md rounded-xl border border-[#c2b28f]/20 shadow-2xl">
+            <div className="mb-8 inline-block">
               <img
                 src={logoImg}
                 alt="ACDOMZ Gestão Condominial"
-                className="w-[280px] md:w-[320px] h-auto object-contain rounded-lg"
+                className="w-[180px] md:w-[220px] h-auto object-contain rounded-lg shadow-2xl bg-[#062945]/80 p-3 backdrop-blur-sm border border-[#c2b28f]/20"
               />
             </div>
 
@@ -91,8 +91,8 @@ export default function Index() {
               },
               {
                 icon: Clock,
-                title: 'Suporte 24/7',
-                desc: 'Atendimento emergencial a qualquer hora do dia ou da noite para tranquilidade total dos moradores.',
+                title: 'Horário Comercial',
+                desc: 'Atendimento dedicado durante o horário comercial para resolução rápida de demandas com total profissionalismo.',
               },
             ].map((feature, i) => (
               <div

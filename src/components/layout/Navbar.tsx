@@ -8,6 +8,7 @@ import logoImg from '@/assets/logo-fundo-azul-9ce9b.jpeg'
 const navLinks = [
   { name: 'Início', path: '/' },
   { name: 'Sobre Nós', path: '/sobre' },
+  { name: 'Fundadores', path: '/fundadores' },
   { name: 'Serviços', path: '/servicos' },
   { name: 'Depoimentos', path: '/depoimentos' },
   { name: 'Contato', path: '/contato' },

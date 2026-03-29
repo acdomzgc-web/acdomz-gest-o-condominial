@@ -71,6 +71,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  to="/fundadores"
+                  className="text-gray-300 hover:text-[#c2b28f] transition-colors flex items-center gap-2 text-sm font-medium"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Fundadores
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/servicos"
                   className="text-gray-300 hover:text-[#c2b28f] transition-colors flex items-center gap-2 text-sm font-medium"
                 >
@@ -103,9 +111,6 @@ export function Footer() {
               <li className="text-gray-300 flex items-center gap-2 text-sm font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Manutenção Predial
               </li>
-              <li className="text-gray-300 flex items-center gap-2 text-sm font-medium">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c2b28f]" /> Assessoria Jurídica
-              </li>
             </ul>
           </div>
 
@@ -118,18 +123,21 @@ export function Footer() {
               <li className="flex items-start gap-3 text-gray-300 text-sm font-medium">
                 <MapPin className="text-[#c2b28f] shrink-0 mt-0.5" size={18} />
                 <span>
-                  Batel - Curitiba - PR
+                  Rua Oscar Borges de Macedo Ribas 135
                   <br />
-                  CEP 80000-000
+                  Curitiba - PR
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-300 text-sm font-medium">
+                <Phone className="text-[#c2b28f] shrink-0 mt-0.5" size={18} />
+                <span className="flex flex-col gap-1">
+                  <span>(41) 98732-2926</span>
+                  <span>(41) 99102-1963</span>
                 </span>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm font-medium">
-                <Phone className="text-[#c2b28f] shrink-0" size={18} />
-                <span>(41) 3000-0000</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-300 text-sm font-medium">
                 <Mail className="text-[#c2b28f] shrink-0" size={18} />
-                <span>contato@acdomz.com.br</span>
+                <span>acdomz.gc@gmail.com</span>
               </li>
             </ul>
           </div>
