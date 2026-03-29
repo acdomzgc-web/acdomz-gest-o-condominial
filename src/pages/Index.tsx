@@ -44,7 +44,6 @@ export default function Index() {
               size="lg"
               className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none uppercase tracking-widest px-8 py-6 h-auto transition-all duration-300"
             >
-              {' '}
               <Link to="/servicos">Conheça Nossas Soluções</Link>
             </Button>
           </div>
